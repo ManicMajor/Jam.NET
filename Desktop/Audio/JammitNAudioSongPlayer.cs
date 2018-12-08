@@ -48,7 +48,7 @@ namespace Jammit.Audio
         d.Volume = 0.75f;
       }
       _waveOut.PlaybackStopped += (sender, args) => {Position = TimeSpan.Zero;};
-      _waveOut.DesiredLatency = 60;
+      _waveOut.DesiredLatency = (int)Properties.Settings.Default.Latency;
       _waveOut.NumberOfBuffers = 2;
       _waveOut.Init(_mixer);
     }

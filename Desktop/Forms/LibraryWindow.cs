@@ -53,6 +53,11 @@ namespace Jammit
       UpdateListView();
     }
 
+    private void ShowSettingsWindow()
+    {
+      new Forms.SettingsWindow().ShowDialog(this);
+    }
+
     private void rescanContentFilesToolStripMenuItem_Click(object sender, EventArgs e)
     {
       Library.UpdateCache();
@@ -104,6 +109,11 @@ namespace Jammit
     private void downloadSongsToolStripMenuItem_Click(object sender, EventArgs e)
     {
       ShowDownloadWindow();
+    }
+
+    private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      ShowSettingsWindow();
     }
   }
 }
