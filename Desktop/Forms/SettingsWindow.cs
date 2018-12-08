@@ -21,6 +21,7 @@ namespace Jammit.Forms
     private void saveButton_Click(object sender, EventArgs e)
     {
       Properties.Settings.Default.Latency = latencyUpDown.Value;
+      Properties.Settings.Default.Save();
       DialogResult = DialogResult.OK;
       Close();
     }
